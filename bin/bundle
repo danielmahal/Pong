@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var browserify = require('browserify');
+
+var bundle = browserify({
+    debug: true
+});
+
+bundle.add(process.argv[2]);
+
+bundle.bundle(null, function(err, src) {
+    process.stdout.write(src);
+});

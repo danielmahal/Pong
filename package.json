@@ -1,0 +1,18 @@
+{
+  "name": "Pong",
+  "version": "0.0.1",
+  "description": "Multiplayer pong",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~3.4.0",
+    "socket.io": "~0.9.16"
+  },
+  "devDependencies": {
+    "browserify": "~2.33.0",
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Daniel Mahal",
+  "license": "MIT"
+}
