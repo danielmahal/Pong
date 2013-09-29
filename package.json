@@ -8,7 +8,7 @@
     "socket.io": "~0.9.16"
   },
   "devDependencies": {
-    "browserify": "~2.33.0",
+    "browserify": "~2.33.0"
   },
   "scripts": {
     "start": "node server.js"
