@@ -14,9 +14,9 @@ var Ball = function(x, y, velX, velY) {
 
 Ball.prototype = Object.create(EventEmitter.prototype);
 
-Ball.prototype.update = function() {
+Ball.prototype.update = function(t) {
     ['x', 'y'].forEach(function(x) {
-        this.position[x] += this.velocity[x];
+        this.position[x] += this.velocity[x] * t;
 
         if(this.position[x] <= 0 || this.position[x] >= 1) {
             this.velocity[x] *= -1;

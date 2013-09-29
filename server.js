@@ -26,6 +26,7 @@ io.sockets.on('connection', function (socket) {
 
     socket.on('disconnect', function() {
         clearInterval(interval);
+        // clearInterval(sendInterval);
         console.log('Client disconnected');
     })
 });
