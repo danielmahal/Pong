@@ -18,9 +18,12 @@ updateCanvasSize();
 var draw = function() {
     context.clearRect(0, 0, w.x, w.y);
 
+    var size = Math.min(10, Math.max(2, (w.x * w.y) / 100000));
+    var x = game.ball.position.x * w.x - (size * (game.ball.position.x * 2 - 1));
+    var y = game.ball.position.y * w.y - (size * (game.ball.position.y * 2 - 1));
     context.fillStyle = 'white';
     context.beginPath();
-    context.arc(game.ball.position.x * w.x, game.ball.position.y * w.y, 10, 0, Math.PI * 2);
+    context.arc(x, y, size, 0, Math.PI * 2);
     context.fill();
     context.closePath();
 }
